@@ -25,7 +25,7 @@ To decode: *This would be done in the recipient's browser*. The **key** would ha
 ```javascript
 var wc2 = new WhiteCipher();
 wc2.setKey(key); // should have been sent with the message
-var decoded = myOtherWc.decode(message);
+var decoded = wc2.decode(message);
 ```
 
 ## Installation
