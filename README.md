@@ -9,27 +9,27 @@ is useful in hiding information and uses the principle of steganography,
 allowing messages to be hidden in plain sight.
 
 Each instantiation of *WhiteCipher* produces a completely
-unique random key. In order for someone to read your message,
-you will need to send them the key along with the message.
+unique random certificate. In order for someone to read your message,
+you will need to send them the certificate along with the message.
 
 To encode: *This would be done in the sender's browser.*
 ```javascript
 var wc = new WhiteCipher();
 var encoded = wc.encode("this is a message");
-var key = wc.getKey(); // to be sent with the message
+var cert = wc.getCert(); // to be sent with the message
 ```
 
 
-To decode: *This would be done in the recipient's browser*. The **key** would have to be sent along with the mmessage.
+To decode: *This would be done in the recipient's browser*. The **certificate** would have to be sent along with the mmessage.
 
 ```javascript
 var wc2 = new WhiteCipher();
-wc2.setKey(key); // should have been sent with the message
+wc2.setCert(cert); // should have been sent with the message
 var decoded = wc2.decode(message);
 ```
 
 ## Installation
-This is written in Vanilla JS (pure JavaScript), so there are no libraries or other dependencies. 
+This is written in Vanilla JS (pure JavaScript), so there are no libraries or other dependencies.
 All you need to do is to include the script as you normally would in your page:
 
 ```html

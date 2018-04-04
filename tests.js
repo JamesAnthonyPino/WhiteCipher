@@ -10,12 +10,12 @@ console.log("dec output--------->",dec)
 var dec2 = wc2.decode(enc);
 console.log("dec2 output--------->",dec2)
 
-var wcKey = wc.getKey();
-console.log("wcKey", wcKey);
-wc2.setKey(wcKey);
+var wcCert = wc.getCert();
+console.log("wcCert", wcCert);
+wc2.setCert(wcCert);
 dec2 = wc2.decode(enc);
 console.log("dec2 output--------->",dec2)
 
-wc2.generateNewKey();
+wc2.generateNewCert();
 dec2 = wc2.decode(enc);
 console.log("dec2 output--------->",dec2)
